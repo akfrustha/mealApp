@@ -2,90 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:meals/models/category.dart';
 import 'package:meals/models/meal.dart';
 
- const availableCategories = [
-  Category(
-    id:'c1',
-    title:'Italian',
-    color:Colors.yellow
-  ),
-    Category(
-    id:'c2',
-    title:'Quick & Easy',
-    color:Colors.tealAccent
-  ),
-    Category(
-    id:'c3',
-    title:'Hamburugers',
-    color:Colors.deepOrange
-  ),
-    Category(
-    id:'c4',
-    title:'Germans',
-    color:Colors.blue
-  ),
-  Category(
-    id:'c1',
-    title:'Ligh&Lovely',
-    color:Colors.purple
-  ),
-    Category(
-    id:'c2',
-    title:'Exotic',
-    color:Colors.white
-  ),
-    Category(
-    id:'c3',
-    title:'Breakfast',
-    color:Colors.cyan
-  ),
-    Category(
-    id:'c4',
-    title:'Asian',
-    color:Colors.blueGrey
-  ),
-   Category(
-    id:'c1',
-    title:'French',
-    color:Colors.yellow
-  ),
-    Category(
-    id:'c2',
-    title:'Summer',
-    color:Colors.tealAccent
-  ),
-    Category(
-    id:'c3',
-    title:'Italian3',
-    color:Colors.deepOrange
-  ),
-    Category(
-    id:'c4',
-    title:'Italian4',
-    color:Colors.blue
-  ),
-  Category(
-    id:'c1',
-    title:'Italian',
-    color:Colors.purple
-  ),
-    Category(
-    id:'c2',
-    title:'Italian2',
-    color:Colors.greenAccent
-  ),
-    Category(
-    id:'c3',
-    title:'Italian3',
-    color:Colors.cyan
-  ),
-    Category(
-    id:'c4',
-    title:'Italian4',
-    color:Colors.blueGrey
-  ),
-
+const availableCategories = [
+  Category(id: 'c1', title: 'Italian', color: Colors.yellow),
+  Category(id: 'c2', title: 'Quick & Easy', color: Colors.tealAccent),
+  Category(id: 'c3', title: 'Hamburgers', color: Colors.deepOrange),
+  Category(id: 'c4', title: 'German', color: Colors.blue),
+  Category(id: 'c5', title: 'Light & Lovely', color: Colors.purple),
+  Category(id: 'c6', title: 'Exotic', color: Colors.white),
+  Category(id: 'c7', title: 'Breakfast', color: Colors.cyan),
+  Category(id: 'c8', title: 'Asian', color: Colors.blueGrey),
+  Category(id: 'c9', title: 'French', color: Colors.orange),
+  Category(id: 'c10', title: 'Summer', color: Colors.greenAccent),
 ];
-
 
 const dummyMeals = [
   Meal(
@@ -94,8 +22,8 @@ const dummyMeals = [
     title: 'Spaghetti with Tomato Sauce',
     affordability: Affordability.affordable,
     complexity: Complexity.simple,
-    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/June_odd-eyed-cat.jpg/320px-June_odd-eyed-cat.jpg',
-
+    imageUrl:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/June_odd-eyed-cat.jpg/320px-June_odd-eyed-cat.jpg',
     duration: 20,
     ingredients: [
       '4 Tomatoes',
@@ -124,7 +52,7 @@ const dummyMeals = [
     title: 'Toast Hawaii',
     affordability: Affordability.affordable,
     complexity: Complexity.simple,
-     imageUrl: 'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
+    imageUrl: 'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
     duration: 10,
     ingredients: [
       '1 Slice White Bread',
@@ -145,12 +73,11 @@ const dummyMeals = [
   ),
   Meal(
     id: 'm3',
-    categories: ['c2', 'c3'],
+    categories: ['c3'],
     title: 'Classic Hamburger',
     affordability: Affordability.pricey,
     complexity: Complexity.simple,
-    imageUrl:
-        'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
+    imageUrl: 'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
     duration: 45,
     ingredients: [
       '300g Cattle Hack',
@@ -171,36 +98,4 @@ const dummyMeals = [
     isVegan: false,
     isVegetarian: false,
   ),
-  Meal(
-    id: 'm4',
-    categories: ['c4'],
-    title: 'Wiener Schnitzel',
-    affordability: Affordability.luxurious,
-    complexity: Complexity.challenging,
-     imageUrl: 'https://cdn.pixabay.com/photo/2018/03/31/19/09/schnitzel-3279045_1280.jpg',
-    duration: 60,
-    ingredients: [
-      '8 Veal Cutlets',
-      '4 Eggs',
-      '200g Bread Crumbs',
-      '100g Flour',
-      '300ml Butter',
-      '100g Vegetable Oil',
-      'Salt',
-      'Lemon Slices'
-    ],
-    steps: [
-      'Tenderize the veal to about 2–4mm, and salt on both sides.',
-      'On a flat plate, stir the eggs briefly with a fork.',
-      'Lightly coat the cutlets in flour, then dip into the egg, and finally coat with breadcrumbs.',
-      'Heat the butter and oil in a large pan (let the fat get very hot) and fry the schnitzels until golden brown on both sides.',
-      'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes “fluffy”.',
-      'Remove, and drain on kitchen paper. Serve with lemon slices.'
-    ],
-    isGlutenFree: false,
-    isLactoseFree: false,
-    isVegan: false,
-    isVegetarian: false,
-  ),
-  // Add more meals if needed...
 ];

@@ -21,7 +21,7 @@ class MealItem extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Image.asset(
+                Image.network(
                   meal.imageUrl,
                   height: 250,
                   width: double.infinity,
