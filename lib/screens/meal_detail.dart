@@ -8,8 +8,9 @@ class MealDetailsScreen extends StatelessWidget {
      required this.meal,
      required this.onToggleFavorite
     });
+
    final Meal meal;
-   final void Function(Meal meal)? onToggleFavorite;
+   final void Function(Meal meal) onToggleFavorite;
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,10 @@ class MealDetailsScreen extends StatelessWidget {
           IconButton(
             onPressed: (){
               onToggleFavorite(meal);
-            }, icon: const Icon(Icons.star),)
-        ],
-
-      ),
+            },
+             icon: const Icon(Icons.star),
+             )
+        ], ),
       body: SingleChildScrollView(
         child: Column(
           children:[
