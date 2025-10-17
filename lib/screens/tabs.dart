@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals/data/dummy_data.dart';
 //import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/categories.dart';
 import 'package:meals/screens/filters.dart';
@@ -6,6 +7,13 @@ import 'package:meals/screens/meals.dart';
 import 'package:meals/models/meal.dart';
 import 'package:meals/widgets/main_drawer.dart';
 
+
+const kInitialFilters ={
+    Filter.glutenFree: false,
+    Filter.lactoseFree: false,
+    Filter.vegetarianFree: false,
+    Filter.vegan: false,
+  };
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -17,6 +25,9 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 0;
   final List<Meal> _favoriteMeals = [];
+   Map<Filter,bool> _selectFilters =kInitialFilters;
+ 
+
 
   void _showInfoMesssage(String message){
     ScaffoldMessenger.of(context).clearSnackBars();
@@ -56,7 +67,10 @@ class _TabsScreenState extends State<TabsScreen> {
         MaterialPageRoute(
           builder: (ctx)=> const FiltersScreen(),
           ),);
-          print(result);
+          setState(() {
+                     _selectFilters = result ?? kInitialFilters;
+
+          });
 
     }
 
@@ -64,6 +78,13 @@ class _TabsScreenState extends State<TabsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final availableMeals = dummyMeals.where((Meal){
+      if(_selectFilters[Filter.glutenFree]! && !meal.isGlutenFree){
+        return false;
+      }
+    });
+
+
     Widget activePage =  CategoriesScreen(onToggleFavorite: _toggleMealFavoriteStatus,);
     var activePageTitle = 'Categories';
 
