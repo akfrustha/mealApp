@@ -43,8 +43,8 @@ const dummyMeals = [
     ],
     isGlutenFree: false,
     isLactoseFree: true,
-    isVegan: true,
-    isVegetarian: true,
+    isVeganFree: true,
+    isVegetarianFree: true,
   ),
   Meal(
     id: 'm2',
@@ -68,8 +68,8 @@ const dummyMeals = [
     ],
     isGlutenFree: false,
     isLactoseFree: false,
-    isVegan: false,
-    isVegetarian: false,
+    isVeganFree: false,
+    isVegetarianFree: false,
   ),
   Meal(
     id: 'm3',
@@ -95,7 +95,7 @@ const dummyMeals = [
     ],
     isGlutenFree: false,
     isLactoseFree: true,
-    isVegan: false,
-    isVegetarian: false,
+    isVeganFree: false,
+    isVegetarianFree: false,
   ),
 ];
