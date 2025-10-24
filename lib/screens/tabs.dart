@@ -21,10 +21,9 @@ class TabsScreen extends ConsumerStatefulWidget {
   const TabsScreen({super.key});
 
   @override
-  ConsumerState<TabsScreen> createState() {
-    return _TabsScreenState();
+  ConsumerState<TabsScreen> createState() => _TabsScreenState();
   } 
-}
+
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 0;
